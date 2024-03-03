@@ -1,5 +1,13 @@
+import Header from './components/Header'
+import { EstiloGlobal } from './styles'
+
 function App() {
-  return <div>teste</div>
+  return (
+    <>
+      <EstiloGlobal />
+      <Header />
+    </>
+  )
 }
 
 export default App
