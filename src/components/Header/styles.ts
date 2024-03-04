@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Header = styled.header`
   display: flex;
@@ -8,6 +8,21 @@ export const Header = styled.header`
   padding: 22px 32px;
   background-color: ${colors.darkBlue};
   border-bottom: 1px solid ${colors.lightGray};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    ul {
+      display: none;
+    }
+  }
 `
 export const Title = styled.h1`
   color: ${colors.white};
@@ -37,5 +52,54 @@ export const List = styled.ul`
         border-color: ${colors.greenWater};
       }
     }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+    flex-direction: column;
+    padding: 44px 24px;
+    background-color: ${colors.darkBlue};
+
+    li {
+      width: 100%;
+      a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: none;
+        border-bottom: 1px solid ${colors.lightGray};
+        font-size: 15px;
+
+        &:hover {
+          border-top: none;
+        }
+      }
+
+      a::after {
+        content: '>';
+        color: ${colors.lightGray};
+      }
+    }
+
+    &.is--open {
+      display: flex;
+    }
+  }
+`
+
+export const Hamburguer = styled.div`
+  width: 24px;
+
+  span {
+    height: 3px;
+    display: block;
+    width: 100%;
+    background-color: ${colors.white};
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: ${breakpoints.tablet}) {
+    display: none;
   }
 `

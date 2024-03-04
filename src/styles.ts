@@ -15,6 +15,11 @@ export const colors = {
   blue: '#2d68f0'
 }
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 export const EstiloGlobal = createGlobalStyle`
   *{
     margin: 0;
