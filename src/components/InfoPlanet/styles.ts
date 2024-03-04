@@ -1,10 +1,15 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Infos = styled.div`
   display: flex;
   align-items: center;
-  padding: 126px 0 86px;
+  margin: 126px 0 86px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    flex-direction: column;
+    margin: 0;
+  }
 `
 
 export const ImgPlanet = styled.div`
@@ -13,7 +18,6 @@ export const ImgPlanet = styled.div`
   align-items: center;
   max-width: 760px;
   width: 100%;
-  position: relative;
 
   div {
     display: flex;
@@ -47,6 +51,23 @@ export const ImgPlanet = styled.div`
       display: none;
     }
   }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 100%;
+    height: 460px;
+
+    div {
+      scale: 0.8;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 304px;
+
+    div {
+      scale: 0.6;
+    }
+  }
 `
 
 export const InfosPlanet = styled.div`
@@ -78,6 +99,31 @@ export const InfosPlanet = styled.div`
       text-decoration: underline;
       color: ${colors.white};
     }
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+
+    .h2 {
+      font-size: 48px;
+    }
+
+    .description {
+      margin-bottom: 32px;
+      font-size: 11px;
+    }
+
+    .source {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    text-align: center;
   }
 `
 
@@ -117,6 +163,15 @@ export const Buttons = styled.div`
       background-color: ${colors.emerald};
       border-color: transparent;
     }
+
+    @media (max-width: ${breakpoints.desktop}) {
+      padding: 8px 20px;
+      font-size: 8px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
   }
 `
 
@@ -125,6 +180,11 @@ export const Description = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 56px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    gap: 8px;
+  }
 `
 
 export const Card = styled.div`
@@ -148,5 +208,61 @@ export const Card = styled.div`
     font-size: 40px;
     font-weight: bold;
     color: ${colors.white};
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 164px;
+    padding: 16px;
+
+    h3 {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 24px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+`
+
+export const ButtonsHeader = styled.div`
+  display: none;
+  justify-content: space-between;
+  border-bottom: 1px solid ${colors.lightGray};
+
+  button {
+    font-family: 'Spartan', sans-serif;
+    text-transform: uppercase;
+    color: ${colors.white};
+    opacity: 0.5;
+    background-color: transparent;
+    padding: 20px 0 16px;
+    font-size: 9px;
+    border: none;
+    border-bottom: 4px solid transparent;
+
+    span {
+      display: none;
+    }
+
+    &.is--active {
+      opacity: 1;
+      border-color: ${colors.emerald};
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
   }
 `

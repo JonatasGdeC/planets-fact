@@ -10,8 +10,45 @@ const InfoPlanet = () => {
   const [internal, setInternal] = useState(false)
   const [geology, setGeology] = useState(false)
 
+  const Buttons = () => {
+    return (
+      <>
+        <button
+          className={overview ? 'is--active' : ''}
+          onClick={() => {
+            setOverview(true), setInternal(false), setGeology(false)
+          }}
+        >
+          <span>01</span>
+          <p>Overview</p>
+        </button>
+        <button
+          className={internal ? 'is--active' : ''}
+          onClick={() => {
+            setOverview(false), setInternal(true), setGeology(false)
+          }}
+        >
+          <span>02</span>
+          <p>Internal Structure</p>
+        </button>
+        <button
+          className={geology ? 'is--active' : ''}
+          onClick={() => {
+            setOverview(false), setInternal(false), setGeology(true)
+          }}
+        >
+          <span>03</span>
+          <p>Surface Geology</p>
+        </button>
+      </>
+    )
+  }
+
   return (
     <>
+      <S.ButtonsHeader>
+        <Buttons />
+      </S.ButtonsHeader>
       <S.Infos>
         <S.ImgPlanet>
           <div>
@@ -29,44 +66,21 @@ const InfoPlanet = () => {
           </div>
         </S.ImgPlanet>
         <S.InfosPlanet>
-          <h2>Mercury</h2>
-          <p className="description">
-            Mercury is the smallest planet in the Solar System and the closest
-            to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
-            shortest of all the Suns planets. Mercury is one of four terrestrial
-            planets in the Solar System, and is a rocky body like Earth.
-          </p>
-          <p className="source">
-            Source : <a href="#">Wikipedia</a>
-          </p>
+          <div>
+            <h2>Mercury</h2>
+            <p className="description">
+              Mercury is the smallest planet in the Solar System and the closest
+              to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
+              shortest of all the Suns planets. Mercury is one of four
+              terrestrial planets in the Solar System, and is a rocky body like
+              Earth.
+            </p>
+            <p className="source">
+              Source : <a href="#">Wikipedia</a>
+            </p>
+          </div>
           <S.Buttons>
-            <button
-              className={overview ? 'is--active' : ''}
-              onClick={() => {
-                setOverview(true), setInternal(false), setGeology(false)
-              }}
-            >
-              <span>01</span>
-              <p>Overview</p>
-            </button>
-            <button
-              className={internal ? 'is--active' : ''}
-              onClick={() => {
-                setOverview(false), setInternal(true), setGeology(false)
-              }}
-            >
-              <span>02</span>
-              <p>Internal Structure</p>
-            </button>
-            <button
-              className={geology ? 'is--active' : ''}
-              onClick={() => {
-                setOverview(false), setInternal(false), setGeology(true)
-              }}
-            >
-              <span>03</span>
-              <p>Surface Geology</p>
-            </button>
+            <Buttons />
           </S.Buttons>
         </S.InfosPlanet>
       </S.Infos>

@@ -16,7 +16,7 @@ export const colors = {
 }
 
 export const breakpoints = {
-  desktop: '1024px',
+  desktop: '1110px',
   tablet: '768px'
 }
 
@@ -34,6 +34,14 @@ export const EstiloGlobal = createGlobalStyle`
     max-width: 1110px;
     width: 100%;
     margin: 0 auto;
+
+    @media(max-width: ${breakpoints.desktop}){
+      padding: 0 40px;
+    }
+
+    @media(max-width: ${breakpoints.tablet}){
+      padding: 0 24px;
+    }
   }
 
   body{
