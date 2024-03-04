@@ -1,13 +1,32 @@
+import { useState } from 'react'
 import mercury from '../../assets/planets-images/mercury.png'
+import mercuryInternal from '../../assets/planets-images/mercury-internal.png'
+import mercuryGeology from '../../assets/planets-images/mercury-geology.png'
 
 import * as S from './styles'
 
 const InfoPlanet = () => {
+  const [overview, setOverview] = useState(true)
+  const [internal, setInternal] = useState(false)
+  const [geology, setGeology] = useState(false)
+
   return (
     <>
       <S.Infos>
         <S.ImgPlanet>
-          <img src={mercury} alt="Mercury" />
+          <div>
+            <img className="planet" src={mercury} alt="Mercury" />
+            <img
+              className={internal ? 'internal' : 'is--close'}
+              src={mercuryInternal}
+              alt=""
+            />
+            <img
+              className={geology ? 'geology' : 'is--close'}
+              src={mercuryGeology}
+              alt=""
+            />
+          </div>
         </S.ImgPlanet>
         <S.InfosPlanet>
           <h2>Mercury</h2>
@@ -21,15 +40,30 @@ const InfoPlanet = () => {
             Source : <a href="#">Wikipedia</a>
           </p>
           <S.Buttons>
-            <button>
+            <button
+              className={overview ? 'is--active' : ''}
+              onClick={() => {
+                setOverview(true), setInternal(false), setGeology(false)
+              }}
+            >
               <span>01</span>
               <p>Overview</p>
             </button>
-            <button>
+            <button
+              className={internal ? 'is--active' : ''}
+              onClick={() => {
+                setOverview(false), setInternal(true), setGeology(false)
+              }}
+            >
               <span>02</span>
               <p>Internal Structure</p>
             </button>
-            <button>
+            <button
+              className={geology ? 'is--active' : ''}
+              onClick={() => {
+                setOverview(false), setInternal(false), setGeology(true)
+              }}
+            >
               <span>03</span>
               <p>Surface Geology</p>
             </button>

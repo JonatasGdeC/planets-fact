@@ -8,9 +8,45 @@ export const Infos = styled.div`
 `
 
 export const ImgPlanet = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 760px;
   width: 100%;
-  text-align: center;
+  position: relative;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    position: relative;
+
+    .planet {
+      display: block;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .internal {
+      display: block;
+      left: 0;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .geology {
+      display: block;
+      position: absolute;
+      top: 70px;
+      z-index: 1;
+    }
+
+    .is--close {
+      display: none;
+    }
+  }
 `
 
 export const InfosPlanet = styled.div`
@@ -75,6 +111,11 @@ export const Buttons = styled.div`
 
     &:hover {
       background-color: ${colors.lightGray};
+    }
+
+    &.is--active {
+      background-color: ${colors.emerald};
+      border-color: transparent;
     }
   }
 `

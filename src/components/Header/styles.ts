@@ -49,7 +49,7 @@ export const List = styled.ul`
 
       &:hover {
         opacity: 1;
-        border-color: ${colors.greenWater};
+        border-color: ${colors.emerald};
       }
     }
   }
