@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import InfoPlanet from './components/InfoPlanet'
 import { EstiloGlobal } from './styles'
 
 function App() {
@@ -6,6 +7,9 @@ function App() {
     <>
       <EstiloGlobal />
       <Header />
+      <div className="container">
+        <InfoPlanet />
+      </div>
     </>
   )
 }

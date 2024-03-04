@@ -35,4 +35,8 @@ export const EstiloGlobal = createGlobalStyle`
     width: 100%;
     margin: 0 auto;
   }
+
+  body{
+    background-color: ${colors.darkBlue};
+  }
 `

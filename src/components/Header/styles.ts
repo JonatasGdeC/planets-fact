@@ -53,39 +53,6 @@ export const List = styled.ul`
       }
     }
   }
-
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-    flex-direction: column;
-    padding: 44px 24px;
-    background-color: ${colors.darkBlue};
-
-    li {
-      width: 100%;
-      a {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: none;
-        border-bottom: 1px solid ${colors.lightGray};
-        font-size: 15px;
-
-        &:hover {
-          border-top: none;
-        }
-      }
-
-      a::after {
-        content: '>';
-        color: ${colors.lightGray};
-      }
-    }
-
-    &.is--open {
-      display: flex;
-    }
-  }
 `
 
 export const Hamburguer = styled.div`
@@ -101,5 +68,40 @@ export const Hamburguer = styled.div`
 
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
+  }
+`
+
+export const MenuHamburguer = styled.div`
+  display: none;
+  flex-direction: column;
+  padding: 44px 24px;
+  background-color: ${colors.darkBlue};
+
+  li {
+    width: 100%;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 28px 0;
+      border-bottom: 1px solid ${colors.lightGray};
+      color: ${colors.white};
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    a::after {
+      content: '>';
+      color: ${colors.lightGray};
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    &.is--open {
+      display: flex;
+    }
   }
 `

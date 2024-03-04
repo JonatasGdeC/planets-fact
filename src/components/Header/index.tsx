@@ -48,9 +48,9 @@ const Header = () => {
           <span />
         </S.Hamburguer>
       </S.Header>
-      <S.List className={menuOpen ? 'is--open' : ''}>
+      <S.MenuHamburguer className={menuOpen ? 'is--open' : ''}>
         <Planets />
-      </S.List>
+      </S.MenuHamburguer>
     </>
   )
 }
