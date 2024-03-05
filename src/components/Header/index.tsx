@@ -42,7 +42,10 @@ const Header = () => {
         <S.List>
           <Planets />
         </S.List>
-        <S.Hamburguer onClick={() => setMenuOpen(!menuOpen)}>
+        <S.Hamburguer
+          className={menuOpen ? 'is--active' : ''}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           <span />
           <span />
           <span />

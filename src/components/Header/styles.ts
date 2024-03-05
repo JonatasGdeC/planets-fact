@@ -66,6 +66,10 @@ export const Hamburguer = styled.div`
     margin-bottom: 4px;
   }
 
+  &.is--active {
+    opacity: 0.6;
+  }
+
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
   }

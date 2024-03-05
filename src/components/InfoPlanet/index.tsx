@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import mercury from '../../assets/planets-images/mercury.png'
-import mercuryInternal from '../../assets/planets-images/mercury-internal.png'
-import mercuryGeology from '../../assets/planets-images/mercury-geology.png'
+import mercury from '../../assets/planets/mercury/mercury.png'
+import mercuryInternal from '../../assets/planets/mercury/mercury-internal.png'
+import mercuryGeology from '../../assets/planets/mercury/mercury-geology.png'
 
 import * as S from './styles'
 
