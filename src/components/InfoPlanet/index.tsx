@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import mercury from '../../assets/planets/mercury/mercury.png'
-import mercuryInternal from '../../assets/planets/mercury/mercury-internal.png'
-import mercuryGeology from '../../assets/planets/mercury/mercury-geology.png'
-
+import { Planet } from '../../App'
 import * as S from './styles'
 
-const InfoPlanet = () => {
+type Props = {
+  planet: Planet
+}
+
+const InfoPlanet = ({ planet }: Props) => {
   const [overview, setOverview] = useState(true)
   const [internal, setInternal] = useState(false)
   const [geology, setGeology] = useState(false)
@@ -52,31 +53,29 @@ const InfoPlanet = () => {
       <S.Infos>
         <S.ImgPlanet>
           <div>
-            <img className="planet" src={mercury} alt="Mercury" />
+            <img
+              className="planet"
+              src={planet.imagePlanet}
+              alt={planet.name}
+            />
             <img
               className={internal ? 'internal' : 'is--close'}
-              src={mercuryInternal}
+              src={planet.imageInternal}
               alt=""
             />
             <img
               className={geology ? 'geology' : 'is--close'}
-              src={mercuryGeology}
+              src={planet.imageGeology}
               alt=""
             />
           </div>
         </S.ImgPlanet>
         <S.InfosPlanet>
           <div>
-            <h2>Mercury</h2>
-            <p className="description">
-              Mercury is the smallest planet in the Solar System and the closest
-              to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
-              shortest of all the Suns planets. Mercury is one of four
-              terrestrial planets in the Solar System, and is a rocky body like
-              Earth.
-            </p>
+            <h2>{planet.name}</h2>
+            <p className="description">{planet.description}</p>
             <p className="source">
-              Source : <a href="#">Wikipedia</a>
+              Source : <a href={planet.link}>Wikipedia</a>
             </p>
           </div>
           <S.Buttons>
@@ -87,19 +86,19 @@ const InfoPlanet = () => {
       <S.Description>
         <S.Card>
           <h3>Rotation Time</h3>
-          <p>58.6 days</p>
+          <p>{planet.rotation} days</p>
         </S.Card>
         <S.Card>
           <h3>Revolution Time</h3>
-          <p>87.97 days</p>
+          <p>{planet.revolution} days</p>
         </S.Card>
         <S.Card>
           <h3>Radius</h3>
-          <p>2,439.7 km</p>
+          <p>{planet.radius} km</p>
         </S.Card>
         <S.Card>
           <h3>Average Temp</h3>
-          <p>430 °C</p>
+          <p>{planet.temperature} °C</p>
         </S.Card>
       </S.Description>
     </>

@@ -5,28 +5,28 @@ const Planets = () => {
   return (
     <>
       <li>
-        <a href="#">Mercury</a>
+        <a href="/">Mercury</a>
       </li>
       <li>
-        <a href="#">Venus</a>
+        <a href="/venus">Venus</a>
       </li>
       <li>
-        <a href="#">Earth</a>
+        <a href="/earth">Earth</a>
       </li>
       <li>
-        <a href="#">Mars</a>
+        <a href="/mars">Mars</a>
       </li>
       <li>
-        <a href="#">Jupiter</a>
+        <a href="/jupiter">Jupiter</a>
       </li>
       <li>
-        <a href="#">Saturn</a>
+        <a href="/saturn">Saturn</a>
       </li>
       <li>
-        <a href="#">Uranus</a>
+        <a href="/uranus">Uranus</a>
       </li>
       <li>
-        <a href="#">Neptune</a>
+        <a href="/neptune">Neptune</a>
       </li>
     </>
   )
