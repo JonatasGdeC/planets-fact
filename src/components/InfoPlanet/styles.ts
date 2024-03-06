@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
+import { PropsPlanet } from '.'
 
 export const Infos = styled.div`
   display: flex;
@@ -57,7 +58,7 @@ export const ImgPlanet = styled.div`
     height: 460px;
 
     div {
-      scale: 0.8;
+      scale: 0.6;
     }
   }
 
@@ -65,7 +66,7 @@ export const ImgPlanet = styled.div`
     height: 304px;
 
     div {
-      scale: 0.6;
+      scale: 0.4;
     }
   }
 `
@@ -127,7 +128,7 @@ export const InfosPlanet = styled.div`
   }
 `
 
-export const Buttons = styled.div`
+export const Buttons = styled.div<Omit<PropsPlanet, 'planet'>>`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -160,7 +161,7 @@ export const Buttons = styled.div`
     }
 
     &.is--active {
-      background-color: ${colors.emerald};
+      background-color: ${(props) => props.colorPlanet};
       border-color: transparent;
     }
 
@@ -236,7 +237,7 @@ export const Card = styled.div`
   }
 `
 
-export const ButtonsHeader = styled.div`
+export const ButtonsHeader = styled.div<Omit<PropsPlanet, 'planet'>>`
   display: none;
   justify-content: space-between;
   border-bottom: 1px solid ${colors.lightGray};
@@ -258,7 +259,7 @@ export const ButtonsHeader = styled.div`
 
     &.is--active {
       opacity: 1;
-      border-color: ${colors.emerald};
+      border-color: ${(props) => props.colorPlanet};
     }
   }
 

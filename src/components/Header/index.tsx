@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import * as S from './styles'
 
+type Props = {
+  colorPlanet: string
+}
+
 const Planets = () => {
   return (
     <>
@@ -32,14 +36,14 @@ const Planets = () => {
   )
 }
 
-const Header = () => {
+const Header = ({ colorPlanet }: Props) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <>
       <S.Header>
         <S.Title>The Planets</S.Title>
-        <S.List>
+        <S.List colorPlanet={colorPlanet}>
           <Planets />
         </S.List>
         <S.Hamburguer

@@ -11,7 +11,7 @@ import {
   Uranus,
   Neptune
 } from './mocks/Planets'
-import { EstiloGlobal } from './styles'
+import { colors, EstiloGlobal } from './styles'
 
 export type Planet = {
   id: number
@@ -31,45 +31,82 @@ function App() {
   const rotas = createBrowserRouter([
     {
       path: '/',
-      element: <InfoPlanet planet={Mecury} />
+      element: (
+        <>
+          <Header colorPlanet={colors.emerald} />
+          <InfoPlanet planet={Mecury} colorPlanet={colors.emerald} />
+        </>
+      )
     },
     {
       path: '/venus',
-      element: <InfoPlanet planet={Venus} />
+      element: (
+        <>
+          <Header colorPlanet={colors.yellow} />
+          <InfoPlanet planet={Venus} colorPlanet={colors.yellow} />
+        </>
+      )
     },
     {
       path: '/earth',
-      element: <InfoPlanet planet={Earth} />
+      element: (
+        <>
+          <Header colorPlanet={colors.purple} />
+          <InfoPlanet planet={Earth} colorPlanet={colors.purple} />
+        </>
+      )
     },
     {
       path: '/mars',
-      element: <InfoPlanet planet={Mars} />
+      element: (
+        <>
+          <Header colorPlanet={colors.darkRed} />
+          <InfoPlanet planet={Mars} colorPlanet={colors.darkRed} />
+        </>
+      )
     },
     {
       path: '/jupiter',
-      element: <InfoPlanet planet={Jupiter} />
+      element: (
+        <>
+          <Header colorPlanet={colors.red} />
+          <InfoPlanet planet={Jupiter} colorPlanet={colors.red} />
+        </>
+      )
     },
     {
       path: '/saturn',
-      element: <InfoPlanet planet={Saturn} />
+      element: (
+        <>
+          <Header colorPlanet={colors.orange} />
+          <InfoPlanet planet={Saturn} colorPlanet={colors.orange} />
+        </>
+      )
     },
     {
       path: '/uranus',
-      element: <InfoPlanet planet={Uranus} />
+      element: (
+        <>
+          <Header colorPlanet={colors.greenWater} />
+          <InfoPlanet planet={Uranus} colorPlanet={colors.greenWater} />
+        </>
+      )
     },
     {
       path: '/neptune',
-      element: <InfoPlanet planet={Neptune} />
+      element: (
+        <>
+          <Header colorPlanet={colors.blue} />
+          <InfoPlanet planet={Neptune} colorPlanet={colors.blue} />
+        </>
+      )
     }
   ])
 
   return (
     <>
       <EstiloGlobal />
-      <Header />
-      <div className="container">
-        <RouterProvider router={rotas} />
-      </div>
+      <RouterProvider router={rotas} />
     </>
   )
 }

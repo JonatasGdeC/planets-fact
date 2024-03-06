@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
+import { PropsPlanet } from '../InfoPlanet'
 
 export const Header = styled.header`
   display: flex;
@@ -31,7 +32,7 @@ export const Title = styled.h1`
   font-weight: 500;
   text-transform: uppercase;
 `
-export const List = styled.ul`
+export const List = styled.ul<Omit<PropsPlanet, 'planet'>>`
   display: flex;
   align-items: center;
   gap: 32px;
@@ -49,7 +50,7 @@ export const List = styled.ul`
 
       &:hover {
         opacity: 1;
-        border-color: ${colors.emerald};
+        border-color: ${(props) => props.colorPlanet};
       }
     }
   }
