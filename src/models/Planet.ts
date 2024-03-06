@@ -4,10 +4,12 @@ class Planet {
   description: string
   link: string
   imagePlanet: string
+  imagePlanet2?: string
+  imagePlanet3?: string
   imageInternal: string
   imageGeology: string
-  rotation: number
-  revolution: number
+  rotation: string
+  revolution: string
   radius: number
   temperature: number
 
@@ -17,10 +19,12 @@ class Planet {
     description: string,
     link: string,
     imagePlanet: string,
+    imagePlanet2: string,
+    imagePlanet3: string,
     imageInternal: string,
     imageGeology: string,
-    rotation: number,
-    revolution: number,
+    rotation: string,
+    revolution: string,
     radius: number,
     temperature: number
   ) {
@@ -29,6 +33,8 @@ class Planet {
     this.description = description
     this.link = link
     this.imagePlanet = imagePlanet
+    this.imagePlanet2 = imagePlanet2
+    this.imagePlanet3 = imagePlanet3
     this.imageInternal = imageInternal
     this.imageGeology = imageGeology
     this.rotation = rotation

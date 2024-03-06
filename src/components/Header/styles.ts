@@ -84,6 +84,15 @@ export const MenuHamburguer = styled.div`
 
   li {
     width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid ${colors.lightGray};
+
+    div {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+    }
 
     a {
       display: flex;
@@ -91,7 +100,7 @@ export const MenuHamburguer = styled.div`
       justify-content: space-between;
       width: 100%;
       padding: 28px 0;
-      border-bottom: 1px solid ${colors.lightGray};
+      padding-left: 25px;
       color: ${colors.white};
       font-size: 15px;
       font-weight: bold;

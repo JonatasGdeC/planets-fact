@@ -20,7 +20,9 @@ import jupiter from '../assets/planets/jupiter/jupiter.png'
 import jupiterInternal from '../assets/planets/jupiter/jupiter-internal.png'
 import jupiterGeology from '../assets/planets/jupiter/jupiter-geology.png'
 
-import saturn from '../assets/planets/saturn/saturn.png'
+import saturn from '../assets/planets/saturn/bola.png'
+import saturn2 from '../assets/planets/saturn/anel1.png'
+import saturn3 from '../assets/planets/saturn/anel2.png'
 import saturnInternal from '../assets/planets/saturn/saturn-internal.png'
 import saturnGeology from '../assets/planets/saturn/saturn-geology.png'
 
@@ -41,8 +43,8 @@ export const Mecury: Planet = {
   imagePlanet: mercury,
   imageInternal: mercuryInternal,
   imageGeology: mercuryGeology,
-  rotation: 58.6,
-  revolution: 87.97,
+  rotation: '58.8 days',
+  revolution: '87.97 days',
   radius: 2439.7,
   temperature: 430
 }
@@ -56,8 +58,8 @@ export const Venus: Planet = {
   imagePlanet: venus,
   imageInternal: venusInternal,
   imageGeology: venusGeology,
-  rotation: 243,
-  revolution: 224.7,
+  rotation: '243 days',
+  revolution: '224.7 days',
   radius: 6051.8,
   temperature: 471
 }
@@ -71,8 +73,8 @@ export const Earth: Planet = {
   imagePlanet: earth,
   imageInternal: earthInternal,
   imageGeology: earthGeology,
-  rotation: 0.99,
-  revolution: 365.26,
+  rotation: '0.99 days',
+  revolution: '365.26 days',
   radius: 6371,
   temperature: 16
 }
@@ -86,8 +88,8 @@ export const Mars: Planet = {
   imagePlanet: mars,
   imageInternal: marsInternal,
   imageGeology: marsGeology,
-  rotation: 1.03,
-  revolution: 1.88,
+  rotation: '1.03 days',
+  revolution: '1.88 years',
   radius: 3389.5,
   temperature: -28
 }
@@ -101,8 +103,8 @@ export const Jupiter: Planet = {
   imagePlanet: jupiter,
   imageInternal: jupiterInternal,
   imageGeology: jupiterGeology,
-  rotation: 9.93,
-  revolution: 11.86,
+  rotation: '9.93 hours',
+  revolution: '11.86 years',
   radius: 69911,
   temperature: -108
 }
@@ -114,10 +116,12 @@ export const Saturn: Planet = {
     'Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It only has one-eighth the average density of Earth.',
   link: 'https://pt.wikipedia.org/wiki/Saturno_(planeta)',
   imagePlanet: saturn,
+  imagePlanet2: saturn2,
+  imagePlanet3: saturn3,
   imageInternal: saturnInternal,
   imageGeology: saturnGeology,
-  rotation: 10.8,
-  revolution: 29.46,
+  rotation: '10.8 hours',
+  revolution: '29.46 years',
   radius: 58232,
   temperature: -138
 }
@@ -131,8 +135,8 @@ export const Uranus: Planet = {
   imagePlanet: uranus,
   imageInternal: uranusInternal,
   imageGeology: uranusGeology,
-  rotation: 17.2,
-  revolution: 84,
+  rotation: '17.2 hours',
+  revolution: '84 years',
   radius: 25362,
   temperature: -195
 }
@@ -146,8 +150,8 @@ export const Neptune: Planet = {
   imagePlanet: neptune,
   imageInternal: neptuneInternal,
   imageGeology: neptuneGeology,
-  rotation: 16.08,
-  revolution: 164.49,
+  rotation: '16.08 hours',
+  revolution: '164.49 years',
   radius: 25362,
   temperature: -195
 }

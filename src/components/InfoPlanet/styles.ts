@@ -34,11 +34,21 @@ export const ImgPlanet = styled.div`
       z-index: -1;
     }
 
+    .anel1 {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .anel2 {
+      position: absolute;
+      z-index: 1;
+    }
+
     .internal {
       display: block;
       left: 0;
       position: absolute;
-      z-index: 1;
+      z-index: -1;
     }
 
     .geology {
@@ -46,6 +56,11 @@ export const ImgPlanet = styled.div`
       position: absolute;
       top: 70px;
       z-index: 1;
+      transition: all ease 0.4s;
+
+      &:hover {
+        scale: 1.5;
+      }
     }
 
     .is--close {
@@ -154,6 +169,10 @@ export const Buttons = styled.div<Omit<PropsPlanet, 'planet'>>`
 
     p {
       color: ${colors.white};
+
+      &.title-mobile {
+        display: none;
+      }
     }
 
     &:hover {
@@ -239,7 +258,9 @@ export const Card = styled.div`
 
 export const ButtonsHeader = styled.div<Omit<PropsPlanet, 'planet'>>`
   display: none;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 45px;
+  padding: 0 24px;
   border-bottom: 1px solid ${colors.lightGray};
 
   button {
@@ -255,6 +276,14 @@ export const ButtonsHeader = styled.div<Omit<PropsPlanet, 'planet'>>`
 
     span {
       display: none;
+    }
+
+    .title-desktop {
+      display: none;
+    }
+
+    .title-mobile {
+      display: block;
     }
 
     &.is--active {

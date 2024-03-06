@@ -1,43 +1,69 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import * as S from './styles'
+import { colors } from '../../styles'
 
 type Props = {
   colorPlanet: string
 }
 
-const Planets = () => {
-  return (
-    <>
-      <li>
-        <a href="/">Mercury</a>
-      </li>
-      <li>
-        <a href="/venus">Venus</a>
-      </li>
-      <li>
-        <a href="/earth">Earth</a>
-      </li>
-      <li>
-        <a href="/mars">Mars</a>
-      </li>
-      <li>
-        <a href="/jupiter">Jupiter</a>
-      </li>
-      <li>
-        <a href="/saturn">Saturn</a>
-      </li>
-      <li>
-        <a href="/uranus">Uranus</a>
-      </li>
-      <li>
-        <a href="/neptune">Neptune</a>
-      </li>
-    </>
-  )
-}
-
 const Header = ({ colorPlanet }: Props) => {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const Planets = () => {
+    return (
+      <>
+        <li>
+          <div style={{ backgroundColor: `${colors.emerald}` }}></div>
+          <Link onClick={() => setMenuOpen(false)} to="/">
+            Mercury
+          </Link>
+        </li>
+        <li>
+          <div style={{ backgroundColor: `${colors.yellow}` }}></div>
+          <Link onClick={() => setMenuOpen(false)} to="/venus">
+            Venus
+          </Link>
+        </li>
+        <li>
+          <div style={{ backgroundColor: `${colors.purple}` }}></div>
+          <Link onClick={() => setMenuOpen(false)} to="/earth">
+            Earth
+          </Link>
+        </li>
+        <li>
+          <div style={{ backgroundColor: `${colors.darkRed}` }}></div>
+          <Link onClick={() => setMenuOpen(false)} to="/mars">
+            Mars
+          </Link>
+        </li>
+        <li>
+          <div style={{ backgroundColor: `${colors.red}` }}></div>
+          <Link onClick={() => setMenuOpen(false)} to="/jupiter">
+            Jupiter
+          </Link>
+        </li>
+        <li>
+          <div style={{ backgroundColor: `${colors.orange}` }}></div>
+          <Link onClick={() => setMenuOpen(false)} to="/saturn">
+            Saturn
+          </Link>
+        </li>
+        <li>
+          <div style={{ backgroundColor: `${colors.greenWater}` }}></div>
+          <Link onClick={() => setMenuOpen(false)} to="/uranus">
+            Uranus
+          </Link>
+        </li>
+        <li>
+          <div style={{ backgroundColor: `${colors.blue}` }}></div>
+          <Link onClick={() => setMenuOpen(false)} to="/neptune">
+            Neptune
+          </Link>
+        </li>
+      </>
+    )
+  }
 
   return (
     <>

@@ -31,7 +31,8 @@ const InfoPlanet = ({ planet, colorPlanet }: PropsPlanet) => {
           }}
         >
           <span>02</span>
-          <p>Internal Structure</p>
+          <p className="title-desktop">Internal Structure</p>
+          <p className="title-mobile">Structure</p>
         </button>
         <button
           className={geology ? 'is--active' : ''}
@@ -40,7 +41,8 @@ const InfoPlanet = ({ planet, colorPlanet }: PropsPlanet) => {
           }}
         >
           <span>03</span>
-          <p>Surface Geology</p>
+          <p className="title-desktop">Surface Geology</p>
+          <p className="title-mobile">Surface</p>
         </button>
       </>
     )
@@ -55,11 +57,13 @@ const InfoPlanet = ({ planet, colorPlanet }: PropsPlanet) => {
         <S.Infos>
           <S.ImgPlanet>
             <div>
+              <img className="anel1" src={planet.imagePlanet2} alt="" />
               <img
                 className="planet"
                 src={planet.imagePlanet}
                 alt={planet.name}
               />
+              <img className="anel2" src={planet.imagePlanet3} alt="" />
               <img
                 className={internal ? 'internal' : 'is--close'}
                 src={planet.imageInternal}
@@ -77,7 +81,10 @@ const InfoPlanet = ({ planet, colorPlanet }: PropsPlanet) => {
               <h2>{planet.name}</h2>
               <p className="description">{planet.description}</p>
               <p className="source">
-                Source : <a href={planet.link}>Wikipedia</a>
+                Source :{' '}
+                <a href={planet.link} target="_blank" rel="noreferrer">
+                  Wikipedia
+                </a>
               </p>
             </div>
             <S.Buttons colorPlanet={colorPlanet}>
@@ -88,11 +95,11 @@ const InfoPlanet = ({ planet, colorPlanet }: PropsPlanet) => {
         <S.Description>
           <S.Card>
             <h3>Rotation Time</h3>
-            <p>{planet.rotation} days</p>
+            <p>{planet.rotation}</p>
           </S.Card>
           <S.Card>
             <h3>Revolution Time</h3>
-            <p>{planet.revolution} days</p>
+            <p>{planet.revolution}</p>
           </S.Card>
           <S.Card>
             <h3>Radius</h3>
