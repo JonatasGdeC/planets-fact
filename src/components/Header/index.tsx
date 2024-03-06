@@ -15,7 +15,7 @@ const Header = ({ colorPlanet }: Props) => {
       <>
         <li>
           <div style={{ backgroundColor: `${colors.emerald}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/">
+          <Link onClick={() => setMenuOpen(false)} to="/mercury">
             Mercury
           </Link>
         </li>
@@ -27,7 +27,7 @@ const Header = ({ colorPlanet }: Props) => {
         </li>
         <li>
           <div style={{ backgroundColor: `${colors.purple}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/earth">
+          <Link onClick={() => setMenuOpen(false)} to="/">
             Earth
           </Link>
         </li>

@@ -17,7 +17,7 @@ import {
 const Rotas = () => (
   <Routes>
     <Route
-      path="/"
+      path="/mercury"
       element={
         <>
           <Header colorPlanet={colors.emerald} />
@@ -35,7 +35,7 @@ const Rotas = () => (
       }
     />
     <Route
-      path="/earth"
+      path="/"
       element={
         <>
           <Header colorPlanet={colors.purple} />
