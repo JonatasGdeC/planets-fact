@@ -63,7 +63,7 @@ export const EstiloGlobal = createGlobalStyle`
     position:absolute;
     z-index: -1;
     inset:0;
-    animation:spacefloating 180s linear infinite;
+    animation:spacefloating 9s linear infinite;
 
     &::after{
       width: 100%;
@@ -75,7 +75,7 @@ export const EstiloGlobal = createGlobalStyle`
       background-image: url(${backgroundStart});
 
       @media(max-width: ${breakpoints.desktop}){
-        transform:translateX(25%);
+        transform:translateX(10%);
       }
     }
 
