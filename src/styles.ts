@@ -85,4 +85,42 @@ export const EstiloGlobal = createGlobalStyle`
       }
     }
   }
+
+// Efeito de Opacidade
+  @keyframes opacitygrow {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+// Efeito de Opacidade Textp
+  @keyframes opacitygrowtext {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+// Efeito de Escala
+  @keyframes scalegrow {
+    0% {
+      transform: scale(0);
+    }
+    65% {
+      transform: scale(1.2, 1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
 `

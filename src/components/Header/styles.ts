@@ -81,6 +81,7 @@ export const MenuHamburguer = styled.div`
   flex-direction: column;
   padding: 44px 24px;
   background-color: ${colors.darkBlue};
+  animation: opacitygrow 0.5s;
 
   li {
     width: 100%;

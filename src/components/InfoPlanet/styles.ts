@@ -32,6 +32,7 @@ export const ImgPlanet = styled.div`
       display: block;
       position: absolute;
       z-index: -1;
+      animation: scalegrow 1s;
     }
 
     .anel1 {
@@ -49,6 +50,7 @@ export const ImgPlanet = styled.div`
       left: 0;
       position: absolute;
       z-index: -1;
+      animation: opacitygrow 1s;
     }
 
     .geology {
@@ -57,9 +59,10 @@ export const ImgPlanet = styled.div`
       top: 70px;
       z-index: 1;
       transition: all ease 0.4s;
+      animation: scalegrow 1s;
 
       &:hover {
-        scale: 1.5;
+        scale: 1.2;
       }
     }
 
@@ -96,6 +99,7 @@ export const InfosPlanet = styled.div`
     font-size: 80px;
     font-weight: 500;
     text-transform: uppercase;
+    animation: opacitygrowtext 0.5s;
   }
 
   .invisible {
@@ -107,6 +111,7 @@ export const InfosPlanet = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
+    animation: opacitygrowtext 0.5s;
   }
 
   .source {
@@ -115,6 +120,7 @@ export const InfosPlanet = styled.div`
     margin-bottom: 40px;
     font-size: 14px;
     font-weight: 100;
+    animation: opacitygrowtext 0.5s;
 
     a {
       display: flex;
@@ -268,7 +274,7 @@ export const Card = styled.div`
 
 export const ButtonsHeader = styled.div<Omit<PropsPlanet, 'planet'>>`
   display: none;
-  justify-content: center;
+  justify-content: space-between;
   gap: 45px;
   padding: 0 24px;
   border-bottom: 1px solid ${colors.lightGray};

@@ -5,10 +5,18 @@ import { EstiloGlobal } from './styles'
 export type Planet = {
   id: number
   name: string
-  description: string
-  descriptionInternal: string
-  descriptionGeology: string
-  link: string
+  planet: {
+    text: string
+    link: string
+  }
+  internal: {
+    text: string
+    link: string
+  }
+  geology: {
+    text: string
+    link: string
+  }
   imagePlanet: string
   imagePlanet2?: string
   imagePlanet3?: string

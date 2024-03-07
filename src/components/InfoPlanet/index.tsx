@@ -81,17 +81,31 @@ const InfoPlanet = ({ planet, colorPlanet }: PropsPlanet) => {
             <div>
               <h2>{planet.name}</h2>
               <p className={overview ? 'description' : 'invisible'}>
-                {planet.description}
+                {planet.planet.text}
               </p>
               <p className={internal ? 'description' : 'invisible'}>
-                {planet.descriptionInternal}
+                {planet.internal.text}
               </p>
               <p className={geology ? 'description' : 'invisible'}>
-                {planet.descriptionGeology}
+                {planet.geology.text}
               </p>
-              <p className="source">
+              <p className={overview ? 'source' : 'invisible'}>
                 Source :
-                <a href={planet.link} target="_blank" rel="noreferrer">
+                <a href={planet.planet.link} target="_blank" rel="noreferrer">
+                  Wikipedia
+                  <img src={iconLink} alt="" />
+                </a>
+              </p>
+              <p className={internal ? 'source' : 'invisible'}>
+                Source :
+                <a href={planet.internal.link} target="_blank" rel="noreferrer">
+                  Wikipedia
+                  <img src={iconLink} alt="" />
+                </a>
+              </p>
+              <p className={geology ? 'source' : 'invisible'}>
+                Source :
+                <a href={planet.geology.link} target="_blank" rel="noreferrer">
                   Wikipedia
                   <img src={iconLink} alt="" />
                 </a>

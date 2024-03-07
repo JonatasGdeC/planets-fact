@@ -1,10 +1,18 @@
 class Planet {
   id: number
   name: string
-  description: string
-  descriptionInternal: string
-  descriptionGeology: string
-  link: string
+  planet: {
+    text: string
+    link: string
+  }
+  internal: {
+    text: string
+    link: string
+  }
+  geology: {
+    text: string
+    link: string
+  }
   imagePlanet: string
   imagePlanet2?: string
   imagePlanet3?: string
@@ -18,10 +26,18 @@ class Planet {
   constructor(
     id: number,
     name: string,
-    description: string,
-    descriptionInternal: string,
-    descriptionGeology: string,
-    link: string,
+    planet: {
+      text: string
+      link: string
+    },
+    internal: {
+      text: string
+      link: string
+    },
+    geology: {
+      text: string
+      link: string
+    },
     imagePlanet: string,
     imagePlanet2: string,
     imagePlanet3: string,
@@ -34,10 +50,15 @@ class Planet {
   ) {
     this.id = id
     this.name = name
-    this.description = description
-    this.descriptionInternal = descriptionInternal
-    this.descriptionGeology = descriptionGeology
-    this.link = link
+    this.planet = planet
+    this.planet.text = planet.text
+    this.planet.link = planet.link
+    this.internal = internal
+    this.internal.text = internal.text
+    this.internal.link = internal.link
+    this.geology = geology
+    this.geology.text = geology.text
+    this.geology.link = geology.link
     this.imagePlanet = imagePlanet
     this.imagePlanet2 = imagePlanet2
     this.imagePlanet3 = imagePlanet3

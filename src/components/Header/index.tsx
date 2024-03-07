@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import * as S from './styles'
 import { colors } from '../../styles'
 
@@ -15,51 +14,51 @@ const Header = ({ colorPlanet }: Props) => {
       <>
         <li>
           <div style={{ backgroundColor: `${colors.emerald}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/mercury">
+          <a onClick={() => setMenuOpen(false)} href="/mercury">
             Mercury
-          </Link>
+          </a>
         </li>
         <li>
           <div style={{ backgroundColor: `${colors.yellow}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/venus">
+          <a onClick={() => setMenuOpen(false)} href="/venus">
             Venus
-          </Link>
+          </a>
         </li>
         <li>
           <div style={{ backgroundColor: `${colors.purple}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/">
+          <a onClick={() => setMenuOpen(false)} href="/">
             Earth
-          </Link>
+          </a>
         </li>
         <li>
           <div style={{ backgroundColor: `${colors.darkRed}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/mars">
+          <a onClick={() => setMenuOpen(false)} href="/mars">
             Mars
-          </Link>
+          </a>
         </li>
         <li>
           <div style={{ backgroundColor: `${colors.red}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/jupiter">
+          <a onClick={() => setMenuOpen(false)} href="/jupiter">
             Jupiter
-          </Link>
+          </a>
         </li>
         <li>
           <div style={{ backgroundColor: `${colors.orange}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/saturn">
+          <a onClick={() => setMenuOpen(false)} href="/saturn">
             Saturn
-          </Link>
+          </a>
         </li>
         <li>
           <div style={{ backgroundColor: `${colors.greenWater}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/uranus">
+          <a onClick={() => setMenuOpen(false)} href="/uranus">
             Uranus
-          </Link>
+          </a>
         </li>
         <li>
           <div style={{ backgroundColor: `${colors.blue}` }}></div>
-          <Link onClick={() => setMenuOpen(false)} to="/neptune">
+          <a onClick={() => setMenuOpen(false)} href="/neptune">
             Neptune
-          </Link>
+          </a>
         </li>
       </>
     )
