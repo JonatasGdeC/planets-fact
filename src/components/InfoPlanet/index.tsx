@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Planet } from '../../App'
+import iconLink from '../../assets/icon-link.png'
 import * as S from './styles'
 
 export type PropsPlanet = {
@@ -57,13 +58,13 @@ const InfoPlanet = ({ planet, colorPlanet }: PropsPlanet) => {
         <S.Infos>
           <S.ImgPlanet>
             <div>
-              <img className="anel1" src={planet.imagePlanet2} alt="" />
+              <img className="anel1" src={planet.imagePlanet2} />
               <img
                 className="planet"
                 src={planet.imagePlanet}
                 alt={planet.name}
               />
-              <img className="anel2" src={planet.imagePlanet3} alt="" />
+              <img className="anel2" src={planet.imagePlanet3} />
               <img
                 className={internal ? 'internal' : 'is--close'}
                 src={planet.imageInternal}
@@ -79,11 +80,20 @@ const InfoPlanet = ({ planet, colorPlanet }: PropsPlanet) => {
           <S.InfosPlanet>
             <div>
               <h2>{planet.name}</h2>
-              <p className="description">{planet.description}</p>
+              <p className={overview ? 'description' : 'invisible'}>
+                {planet.description}
+              </p>
+              <p className={internal ? 'description' : 'invisible'}>
+                {planet.descriptionInternal}
+              </p>
+              <p className={geology ? 'description' : 'invisible'}>
+                {planet.descriptionGeology}
+              </p>
               <p className="source">
-                Source :{' '}
+                Source :
                 <a href={planet.link} target="_blank" rel="noreferrer">
                   Wikipedia
+                  <img src={iconLink} alt="" />
                 </a>
               </p>
             </div>

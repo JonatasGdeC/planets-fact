@@ -6,6 +6,8 @@ export type Planet = {
   id: number
   name: string
   description: string
+  descriptionInternal: string
+  descriptionGeology: string
   link: string
   imagePlanet: string
   imagePlanet2?: string

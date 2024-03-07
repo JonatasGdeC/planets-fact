@@ -2,6 +2,8 @@ class Planet {
   id: number
   name: string
   description: string
+  descriptionInternal: string
+  descriptionGeology: string
   link: string
   imagePlanet: string
   imagePlanet2?: string
@@ -17,6 +19,8 @@ class Planet {
     id: number,
     name: string,
     description: string,
+    descriptionInternal: string,
+    descriptionGeology: string,
     link: string,
     imagePlanet: string,
     imagePlanet2: string,
@@ -31,6 +35,8 @@ class Planet {
     this.id = id
     this.name = name
     this.description = description
+    this.descriptionInternal = descriptionInternal
+    this.descriptionGeology = descriptionGeology
     this.link = link
     this.imagePlanet = imagePlanet
     this.imagePlanet2 = imagePlanet2

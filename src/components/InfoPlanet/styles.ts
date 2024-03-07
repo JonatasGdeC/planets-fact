@@ -98,6 +98,10 @@ export const InfosPlanet = styled.div`
     text-transform: uppercase;
   }
 
+  .invisible {
+    display: none;
+  }
+
   .description {
     margin-bottom: 24px;
     font-size: 14px;
@@ -106,14 +110,20 @@ export const InfosPlanet = styled.div`
   }
 
   .source {
+    display: flex;
+    gap: 8px;
     margin-bottom: 40px;
     font-size: 14px;
     font-weight: 100;
 
     a {
+      display: flex;
+      gap: 8px;
+      align-items: bottom;
       font-weight: bold;
       text-decoration: underline;
       color: ${colors.white};
+      opacity: 0.7;
     }
   }
 
