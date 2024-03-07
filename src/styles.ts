@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import backgroundStart from './assets/background-stars.svg'
 
 export const colors = {
   white: '#fff',
@@ -46,5 +47,42 @@ export const EstiloGlobal = createGlobalStyle`
 
   body{
     background-color: ${colors.darkBlue};
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .background-start{
+    width: 100%;
+    height: 100%;
+    background-image: url(${backgroundStart});
+    background-size: cover;
+    object-fit: cover;
+    position:absolute;
+    z-index: -1;
+    inset:0;
+    animation:spacefloating 180s linear infinite;
+
+    &::after{
+      width: 100%;
+      content: "";
+      inset:0;
+      z-index: -1;
+      position:absolute;
+      transform:translateX(100%);
+      background-image: url(${backgroundStart});
+
+      @media(max-width: ${breakpoints.desktop}){
+        transform:translateX(25%);
+      }
+    }
+
+    @keyframes spacefloating{
+      100%{
+        transform:translateX(-90%);
+      }
+    }
   }
 `

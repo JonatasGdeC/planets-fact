@@ -24,6 +24,7 @@ function App() {
   return (
     <>
       <EstiloGlobal />
+      <div className="background-start"></div>
       <BrowserRouter>
         <Rotas />
       </BrowserRouter>
