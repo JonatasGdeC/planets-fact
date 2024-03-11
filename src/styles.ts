@@ -71,7 +71,7 @@ export const EstiloGlobal = createGlobalStyle`
       inset:0;
       z-index: -1;
       position:absolute;
-      transform:translateX(100%);
+      transform:translateX(10%);
       background-image: url(${backgroundStart});
 
       @media(max-width: ${breakpoints.desktop}){
@@ -96,7 +96,7 @@ export const EstiloGlobal = createGlobalStyle`
     }
   }
 
-// Efeito de Opacidade Textp
+// Efeito de Opacidade Texto
   @keyframes opacitygrowtext {
     0% {
       opacity: 0;
